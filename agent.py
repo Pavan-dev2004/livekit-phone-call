@@ -173,12 +173,17 @@ async def entrypoint(ctx: JobContext):
     #     # llm=openai.realtime.RealtimeModel()
     # )
 
+    # session = AgentSession(
+    #                 llm=openai.realtime.RealtimeModel(  
+    #                         modalities=["text"]
+    #                     ),
+    #                 tts=cartesia.TTS(model="sonic-2", voice="78ab82d5-25be-4f7d-82b3-7ad64e5b85b2")
+    #             ) 
+
+
     session = AgentSession(
-                    llm=openai.realtime.RealtimeModel(  
-                            modalities=["text"]
-                        ),
-                    tts=cartesia.TTS(model="sonic-2", voice="78ab82d5-25be-4f7d-82b3-7ad64e5b85b2")
-                )
+                    llm=openai.realtime.RealtimeModel()
+                ) 
 
     # start the session first before dialing, to ensure that when the user picks up
     # the agent does not miss anything the user says
