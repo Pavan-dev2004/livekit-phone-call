@@ -143,10 +143,7 @@ AI: "Thank you so much for your time today, {CANDIDATE_NAME}. I appreciate the r
 AI: "We will review your answers and get back to you soon with the next steps. Have a wonderful day!"
 AI: "You may now hang up the call. Goodbye!"
 """
-        instructions2 = """You are an customer service agent for a dental practice. Your goal is to confirm the appointment details.
-        As a customer service representative, you will be polite and professional at all times. Allow user to end the conversation.
-        """
-        super().__init__(instructions=instructions2)
+        super().__init__(instructions=instructions)
         self.participant: rtc.RemoteParticipant | None = None
 
     def set_participant(self, participant: rtc.RemoteParticipant):
